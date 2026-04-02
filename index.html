@@ -404,57 +404,6 @@
       margin-bottom: 12px;
     }
 
-    .comment-box {
-      display: grid;
-      gap: 12px;
-    }
-
-    .comment-box input,
-    .comment-box textarea {
-      width: 100%;
-      padding: 12px 14px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: var(--surface);
-      color: var(--text);
-      font: inherit;
-      resize: vertical;
-    }
-
-    .comment-note {
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    .comment-list {
-      display: grid;
-      gap: 12px;
-      margin-top: 16px;
-    }
-
-    .comment-item {
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 14px;
-      background: var(--surface-2);
-    }
-
-    .comment-item strong {
-      display: block;
-      margin-bottom: 4px;
-    }
-
-    .comment-date {
-      display: block;
-      color: var(--muted);
-      font-size: 12px;
-      margin-bottom: 8px;
-    }
-
-    .comment-actions {
-      margin-top: 10px;
-    }
-
     footer {
       border-top: 1px solid var(--line);
       padding-top: 18px;
@@ -564,7 +513,6 @@
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#articles">Articles</a></li>
-            <li><a href="#comments">Comments</a></li>
           </ul>
         </section>
 
@@ -588,7 +536,7 @@
             <button class="btn icon-btn" id="themeToggle" aria-label="Toggle Theme" title="Toggle Theme">
               <span id="themeIcon">🌙</span>
             </button>
-            <a class="btn primary" href="#comments">Leave a Message</a>
+            <a class="btn primary" href="#articles">Open Articles</a>
           </div>
         </div>
 
@@ -631,7 +579,7 @@
             <span class="section-subtitle">Two selectable sections inside one page</span>
           </div>
 
-          <div class="tab-controls" id="projectTabs">
+          <div class="tab-controls">
             <button class="tab-btn active" data-tab="portfolioProjects"><span>✅</span><span>Completed</span></button>
             <button class="tab-btn" data-tab="portfolioArticles"><span>🛠️</span><span>In progress</span></button>
           </div>
@@ -654,28 +602,27 @@
         <section class="section" id="articles">
           <div class="section-title">
             <h2>Articles / Notes</h2>
-            <span class="section-subtitle">Space for your posts and useful links</span>
+            <span class="section-subtitle">Two selectable sections inside one page</span>
           </div>
-          <div class="articles" id="mainArticleList"></div>
-          <div class="more-wrap">
-            <button class="btn" id="loadMoreMainArticles">More</button>
-          </div>
-        </section>
 
-        <section class="section" id="comments">
-          <div class="section-title">
-            <h2>Comments</h2>
-            <span class="section-subtitle">Client-side demo comment section</span>
+          <div class="tab-controls">
+            <button class="tab-btn active" data-tab="articlesListSection"><span>📰</span><span>Maqolalar</span></button>
+            <button class="tab-btn" data-tab="notesListSection"><span>📝</span><span>Notes</span></button>
           </div>
-          <div class="comment-box">
-            <input type="text" id="commentName" placeholder="Your name" />
-            <textarea id="commentText" rows="4" placeholder="Write a short message or comment..."></textarea>
-            <div>
-              <button class="btn primary" id="addCommentBtn">Post Comment</button>
+
+          <div class="tab-content active" id="articlesListSection">
+            <div class="articles" id="mainArticleList"></div>
+            <div class="more-wrap">
+              <button class="btn" id="loadMoreMainArticles">More</button>
             </div>
-            <div class="comment-note">New comments include date and time. On GitHub Pages, they are stored in browser storage unless you add a backend.</div>
           </div>
-          <div class="comment-list" id="commentList"></div>
+
+          <div class="tab-content" id="notesListSection">
+            <div class="articles" id="notesList"></div>
+            <div class="more-wrap">
+              <button class="btn" id="loadMoreNotes">More</button>
+            </div>
+          </div>
         </section>
 
         <footer>
@@ -714,12 +661,6 @@
       themeIcon.textContent = body.classList.contains('dark') ? '☀️' : '🌙';
     }
 
-    // =============================
-    // DATA SECTION
-    // Siz kiritgan project va article ma'lumotlari o'zgartirilmagan.
-    // Skills va comments JSON dan olinadi.
-    // =============================
-
     const projectsData = [
       { title: 'DevOps Learning Portfolio', text: 'A collection of notes, practical labs, and deployment experiments presented in a structured way.', link: '#', linkText: 'View project' },
       { title: 'Networking Lab Archive', text: 'Summaries of routing, switching, and simulation tasks with screenshots, configs, and outcomes.', link: '#', linkText: 'Read more' },
@@ -734,16 +675,22 @@
     ];
 
     const articlesData = [
-      { title: 'How I Organize My Technical Study Notes', text: 'Short reflections on keeping learning materials clean, searchable, and easy to review.', link: '#comments', linkText: 'Discuss this article' },
-      { title: 'My GitHub Pages Portfolio Journey', text: 'A simple write-up about turning a CV-style design into a responsive personal website.', link: '#comments', linkText: 'Leave a comment' },
-      { title: 'Why Clean UI Matters in Student Portfolios', text: 'A short article about making personal websites easier to read and understand.', link: '#comments', linkText: 'Read discussion' },
-      { title: 'Learning by Building Small Projects', text: 'Why small but complete projects can improve technical skills faster.', link: '#comments', linkText: 'Open article' },
-      { title: 'How I Present My Academic Work Online', text: 'Tips for showing reports, coursework, and project outcomes in one place.', link: '#comments', linkText: 'See comments' },
-      { title: 'Simple Design for Better Readability', text: 'How spacing, contrast, and structure affect website usability.', link: '#comments', linkText: 'Read more' },
-      { title: 'From Notes to Portfolio Content', text: 'Turning personal study materials into useful public-facing portfolio sections.', link: '#comments', linkText: 'View article' },
-      { title: 'Portfolio Writing in a Professional Tone', text: 'Small writing choices that make a student portfolio look more polished.', link: '#comments', linkText: 'Join discussion' },
-      { title: 'Balancing Modern Design and CV Structure', text: 'How to keep a resume-inspired site clean without looking outdated.', link: '#comments', linkText: 'Explore article' },
-      { title: 'A Better Way to Show Learning Progress', text: 'Using articles and projects together to show real growth over time.', link: '#comments', linkText: 'Open discussion' }
+      { title: 'How I Organize My Technical Study Notes', text: 'Short reflections on keeping learning materials clean, searchable, and easy to review.', link: '#', linkText: 'Read article' },
+      { title: 'My GitHub Pages Portfolio Journey', text: 'A simple write-up about turning a CV-style design into a responsive personal website.', link: '#', linkText: 'Read article' },
+      { title: 'Why Clean UI Matters in Student Portfolios', text: 'A short article about making personal websites easier to read and understand.', link: '#', linkText: 'Read article' },
+      { title: 'Learning by Building Small Projects', text: 'Why small but complete projects can improve technical skills faster.', link: '#', linkText: 'Open article' },
+      { title: 'How I Present My Academic Work Online', text: 'Tips for showing reports, coursework, and project outcomes in one place.', link: '#', linkText: 'Read article' },
+      { title: 'Simple Design for Better Readability', text: 'How spacing, contrast, and structure affect website usability.', link: '#', linkText: 'Read more' },
+      { title: 'Portfolio Writing in a Professional Tone', text: 'Small writing choices that make a student portfolio look more polished.', link: '#', linkText: 'Read article' }
+    ];
+
+    const notesData = [
+      { title: 'Linux Commands Notes', text: 'Short notes for useful Linux commands and day-to-day terminal workflows.', link: '#', linkText: 'Open note' },
+      { title: 'Docker Quick Notes', text: 'Small reminders and cheat-sheet style notes about containers and images.', link: '#', linkText: 'Open note' },
+      { title: 'AWS Revision Notes', text: 'Concise cloud notes for revision and portfolio documentation.', link: '#', linkText: 'Open note' },
+      { title: 'Python Snippets', text: 'Useful code snippets and mini reminders for Python practice.', link: '#', linkText: 'Open note' },
+      { title: 'Kubernetes Basics', text: 'Simple concept notes for pods, deployments, and services.', link: '#', linkText: 'Open note' },
+      { title: 'Networking Notes', text: 'Compact notes about routing, switching, and addressing.', link: '#', linkText: 'Open note' }
     ];
 
     const experienceData = [
@@ -755,7 +702,7 @@
       { title: 'Experience Placeholder 6', meta: 'Add your date • Add your place', text: 'Add your next experience or education item here.' }
     ];
 
-    const fallbackSkillsData = [
+    const skillsData = [
       {
         category: 'DevOps',
         skills: ['Linux', 'Docker', 'AWS', 'Ansible']
@@ -769,42 +716,6 @@
         skills: ['Kubernets']
       }
     ];
-
-    const fallbackCommentsData = [
-      {
-        name: 'Visitor',
-        text: 'Very clean portfolio design. Easy to read and professional.',
-        date: '2026-04-02 18:00'
-      },
-      {
-        name: 'Student Friend',
-        text: 'The CV-style layout looks modern and organized.',
-        date: '2026-04-02 18:10'
-      }
-    ];
-
-    // =============================
-    // JSON LOADING
-    // skills.json -> recommended and works on GitHub Pages
-    // comments.json -> read-only from frontend
-    // write to comments.json directly from browser is NOT possible on GitHub Pages
-    // =============================
-
-    async function loadJsonWithFallback(path, fallback) {
-      try {
-        const response = await fetch(path, { cache: 'no-store' });
-        if (!response.ok) {
-          throw new Error('File not found');
-        }
-        return await response.json();
-      } catch (error) {
-        return fallback;
-      }
-    }
-
-    // =============================
-    // REUSABLE RENDER FUNCTIONS
-    // =============================
 
     function createCard(item) {
       return `
@@ -865,10 +776,6 @@
       render();
     }
 
-    // =============================
-    // PROJECTS / ARTICLES / EXPERIENCE
-    // =============================
-
     setupLoadMore({
       data: projectsData,
       containerId: 'projectList',
@@ -894,16 +801,20 @@
     });
 
     setupLoadMore({
+      data: notesData,
+      containerId: 'notesList',
+      buttonId: 'loadMoreNotes',
+      step: 5,
+      renderItem: createCard
+    });
+
+    setupLoadMore({
       data: experienceData,
       containerId: 'experienceList',
       buttonId: 'loadMoreExperience',
       step: 5,
       renderItem: createTimelineItem
     });
-
-    // =============================
-    // TAB SYSTEM
-    // =============================
 
     const tabButtons = document.querySelectorAll('.tab-btn');
     const tabContents = document.querySelectorAll('.tab-content');
@@ -920,99 +831,12 @@
       });
     });
 
-    // =============================
-    // COMMENTS SECTION
-    // comments.json can be READ from frontend, but not WRITTEN on GitHub Pages.
-    // New comments are stored in localStorage with date and time.
-    // =============================
-
-    const addCommentBtn = document.getElementById('addCommentBtn');
-    const commentList = document.getElementById('commentList');
-    const commentName = document.getElementById('commentName');
-    const commentText = document.getElementById('commentText');
-
-    function escapeHtml(text) {
-      const div = document.createElement('div');
-      div.textContent = text;
-      return div.innerHTML;
-    }
-
-    function formatDateTime(date = new Date()) {
-      const year = date.getFullYear();
-      const month = String(date.getMonth() + 1).padStart(2, '0');
-      const day = String(date.getDate()).padStart(2, '0');
-      const hours = String(date.getHours()).padStart(2, '0');
-      const minutes = String(date.getMinutes()).padStart(2, '0');
-      return `${year}-${month}-${day} ${hours}:${minutes}`;
-    }
-
-    async function loadComments() {
-      const jsonComments = await loadJsonWithFallback('./comments.json', fallbackCommentsData);
-      const storedComments = JSON.parse(localStorage.getItem('portfolio-comments') || '[]');
-      return [...storedComments, ...jsonComments];
-    }
-
-    function saveComments(comments) {
-      localStorage.setItem('portfolio-comments', JSON.stringify(comments));
-    }
-
-    async function renderComments() {
-      const comments = await loadComments();
-      commentList.innerHTML = '';
-
-      comments.forEach((comment, index) => {
-        const item = document.createElement('div');
-        item.className = 'comment-item';
-        item.innerHTML = `
-          <strong>${escapeHtml(comment.name)}</strong>
-          <span class="comment-date">${escapeHtml(comment.date || 'Unknown date')}</span>
-          <p>${escapeHtml(comment.text)}</p>
-          ${comment.fromLocalStorage ? `<div class="comment-actions"><button class="btn" onclick="deleteComment(${index})">Delete</button></div>` : ''}
-        `;
-        commentList.appendChild(item);
-      });
-    }
-
-    window.deleteComment = async function(index) {
-      const storedComments = JSON.parse(localStorage.getItem('portfolio-comments') || '[]');
-      storedComments.splice(index, 1);
-      saveComments(storedComments);
-      renderComments();
-    };
-
-    addCommentBtn.addEventListener('click', async () => {
-      const name = commentName.value.trim() || 'Anonymous';
-      const text = commentText.value.trim();
-
-      if (!text) {
-        alert('Please write a short message first.');
-        return;
-      }
-
-      const storedComments = JSON.parse(localStorage.getItem('portfolio-comments') || '[]');
-      storedComments.unshift({
-        name,
-        text,
-        date: formatDateTime(),
-        fromLocalStorage: true
-      });
-      saveComments(storedComments);
-      renderComments();
-      commentName.value = '';
-      commentText.value = '';
-    });
-
-    // =============================
-    // INITIAL LOAD
-    // =============================
-
-    async function init() {
-      const skillsData = await loadJsonWithFallback('./skills.json', fallbackSkillsData);
+    function init() {
       renderSkills(skillsData);
-      renderComments();
     }
 
     init();
   </script>
 </body>
 </html>
+
