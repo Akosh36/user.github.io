@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Name - Portfolio</title>
+  <meta name="description" content="Personal portfolio of Your Name, web developer.">
+  <style>
+    :root { --bg:#0f172a; --fg:#e2e8f0; --muted:#94a3b8; --accent:#38bdf8; --card:#1e293b; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:radial-gradient(circle at 20% 20%, #1e293b 0%, #0f172a 51%, #020617 100%); color:var(--fg); font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; line-height:1.6; }
+    .container{width:min(1100px,calc(100% - 2rem));margin:0 auto;padding:2rem 0;}
+    header{padding:4rem 0 3rem;text-align:center;}
+    h1{font-size:min(4rem,9vw);margin:.2rem 0;}
+    h2{font-size:1.75rem;margin:0 0 1rem;}
+    p{margin:.75rem 0;}
+    a{color:var(--accent);text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    .btn{display:inline-block;padding:.75rem 1.2rem;border:1px solid var(--accent);border-radius:.55rem;color:var(--accent);transition:.2s;}
+    .btn:hover{background:rgba(56,189,248,.12);}
+    section{margin:3rem 0;}
+    .grid{display:grid;gap:1.2rem;}
+    .grid-2{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));}
+    .card{background:var(--card);border:1px solid rgba(148,163,184,.2);border-radius:.9rem;padding:1.3rem;}
+    .card h3{margin-top:0;}
+    .skills{display:flex;flex-wrap:wrap;gap:.6rem;}
+    .skill{background:rgba(56,189,248,.2);color:#e0f2fe;border-radius:999px;padding:.4rem .8rem;font-size:.9rem;}
+    footer{text-align:center;margin-top:4rem;padding:2rem 0;color:var(--muted);font-size:.9rem;}
+    .topnav{position:fixed;top:0;left:0;width:100%;background:rgba(15,23,42,.86);backdrop-filter:blur(5px);z-index:150;padding:.65rem 0;}
+    .nav-inner{width:min(1100px,calc(100% - 2rem));margin:0 auto;display:flex;justify-content:space-between;align-items:center;}
+    .nav-links{display:flex;gap:1rem;}
+    .nav-links a{color:var(--fg);font-weight:500;}
+    .nav-links a:hover{color:var(--accent);}
+    .section-title{display:inline-block;border-left:3px solid var(--accent);padding-left:.8rem;color:#fff;font-size:1.1rem;}
+    @media (max-width:740px) {.topnav{position:static;}.container{padding-top:1rem;}.header-sub{font-size:1.1rem;}}
+  </style>
+</head>
+<body>
+  <nav class="topnav" aria-label="Primary">
+    <div class="nav-inner">
+      <a href="#home" style="font-weight:700;color:#fff;">Your Name</a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+  <main class="container">
+    <header id="home">
+      <p class="header-sub" style="color:var(--muted);margin:0 0 .5rem;">Hi, I’m</p>
+      <h1>Your Name</h1>
+      <p style="max-width:760px;margin:.8rem auto 1.5rem;">Frontend engineer building fast, accessible, and delightful experiences on the web. I love combining clean UI with strong technical foundations.</p>
+      <a class="btn" href="#contact">Get in Touch</a>
+    </header>
+
+    <section id="about">
+      <span class="section-title">About Me</span>
+      <div class="card" style="margin-top:1rem;">
+        <p>I’m a web developer with X years of experience building products for startups and teams. My focus is on modern JavaScript, performance, and developer ergonomics.</p>
+        <ul style="margin:.8rem 0 0;padding-left:1.2rem;">
+          <li>Based in [City, Country]</li>
+          <li>Currently working on [Your current role or project]</li>
+          <li>Open to contracting, collaboration, and mentorship</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects">
+      <span class="section-title">Featured Projects</span>
+      <div class="grid grid-2" style="margin-top:1rem;">
+        <article class="card">
+          <h3>Project One</h3>
+          <p>Custom web app with responsive UI, API integration, and real-time updates.</p>
+          <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+          <a href="#" target="_blank" rel="noopener">View project</a>
+        </article>
+        <article class="card">
+          <h3>Project Two</h3>
+          <p>Performance-first site built with static generation and careful accessibility testing.</p>
+          <p><strong>Tech:</strong> Next.js, TypeScript, Tailwind CSS</p>
+          <a href="#" target="_blank" rel="noopener">View project</a>
+        </article>
+        <article class="card">
+          <h3>Project Three</h3>
+          <p>Design system work for consistent UI across web and mobile platforms.</p>
+          <p><strong>Tech:</strong> React, Storybook, Figma</p>
+          <a href="#" target="_blank" rel="noopener">View project</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <span class="section-title">Skills</span>
+      <div class="card" style="margin-top:1rem;">
+        <div class="skills">
+          <span class="skill">HTML</span>
+          <span class="skill">CSS</span>
+          <span class="skill">JavaScript</span>
+          <span class="skill">TypeScript</span>
+          <span class="skill">React</span>
+          <span class="skill">Node.js</span>
+          <span class="skill">Git</span>
+          <span class="skill">Accessibility</span>
+          <span class="skill">CI/CD</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <span class="section-title">Contact</span>
+      <div class="card" style="margin-top:1rem;">
+        <p>I’m currently available for freelance and full-time opportunities.</p>
+        <ul style="margin:.8rem 0 0;padding-left:1.2rem;">
+          <li>Email: <a href="mailto:you@example.com">you@example.com</a></li>
+          <li>LinkedIn: <a href="#" target="_blank" rel="noopener">linkedin.com/in/your-profile</a></li>
+          <li>GitHub: <a href="#" target="_blank" rel="noopener">github.com/your-profile</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>© <span id="year"></span> Your Name. Built with plain HTML/CSS.</small>
+  </footer>
+
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
