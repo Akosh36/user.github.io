@@ -1,0 +1,14 @@
+[
+  {
+    "category": "DevOps",
+    "skills": ["Linux", "Docker", "AWS", "Ansible"]
+  },
+  {
+    "category": "Programming",
+    "skills": ["Python"]
+  },
+  {
+    "category": "Orchestration",
+    "skills": ["Kubernets"]
+  }
+]
