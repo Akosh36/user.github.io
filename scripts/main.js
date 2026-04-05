@@ -82,7 +82,7 @@ setupLoadMore({
   data: completedProjectsData,
   containerId: 'projectList',
   buttonId: 'loadMoreProjects',
-  step: 5,
+  step: 3,
   renderItem: createCard
 });
 
@@ -90,7 +90,7 @@ setupLoadMore({
   data: inProgressProjectsData,
   containerId: 'articlePreviewList',
   buttonId: 'loadMorePreviewArticles',
-  step: 5,
+  step: 3,
   renderItem: createCard
 });
 
@@ -98,7 +98,7 @@ setupLoadMore({
   data: articlesData,
   containerId: 'mainArticleList',
   buttonId: 'loadMoreMainArticles',
-  step: 5,
+  step: 3,
   renderItem: createCard
 });
 
@@ -106,7 +106,7 @@ setupLoadMore({
   data: notesData,
   containerId: 'notesList',
   buttonId: 'loadMoreNotes',
-  step: 5,
+  step: 3,
   renderItem: createCard
 });
 
@@ -114,7 +114,7 @@ setupLoadMore({
   data: experienceData,
   containerId: 'experienceList',
   buttonId: 'loadMoreExperience',
-  step: 5,
+  step: 3,
   renderItem: createTimelineItem
 });
 
