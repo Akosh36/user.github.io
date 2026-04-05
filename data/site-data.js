@@ -1,0 +1,55 @@
+const projectsData = [
+  { title: 'DevOps Learning Portfolio', text: 'A collection of notes, practical labs, and deployment experiments presented in a structured way.', link: '#', linkText: 'View project' },
+  { title: 'Networking Lab Archive', text: 'Summaries of routing, switching, and simulation tasks with screenshots, configs, and outcomes.', link: '#', linkText: 'Read more' },
+  { title: 'Academic Writing & Research', text: 'Coursework, technical writeups, and presentation-ready materials collected in one portfolio space.', link: '#', linkText: 'Explore' },
+  { title: 'Linux Practice Journal', text: 'Commands, troubleshooting notes, and useful Linux workflows documented clearly.', link: '#', linkText: 'Open' },
+  { title: 'Python Mini Projects', text: 'Simple Python practice projects built for learning logic and clean coding.', link: '#', linkText: 'See details' },
+  { title: 'Embedded Systems Tasks', text: 'Arduino and sensor-based projects with short explanations and code samples.', link: '#', linkText: 'Visit' },
+  { title: 'Database Exercises', text: 'Structured SQL tasks and database design practice in an easy-to-review format.', link: '#', linkText: 'Check project' },
+  { title: 'Cybersecurity Notes', text: 'Study notes about security basics, web vulnerabilities, and safe lab practice.', link: '#', linkText: 'Learn more' },
+  { title: 'Cloud Practice Reports', text: 'Simple reports and summaries from cloud and deployment related exercises.', link: '#', linkText: 'Open report' },
+  { title: 'Portfolio UI Experiments', text: 'Small frontend layout experiments used to improve personal website design.', link: '#', linkText: 'Preview' }
+];
+
+const articlesData = [
+  { title: 'How I Organize My Technical Study Notes', text: 'Short reflections on keeping learning materials clean, searchable, and easy to review.', link: '#', linkText: 'Read article' },
+  { title: 'My GitHub Pages Portfolio Journey', text: 'A simple write-up about turning a CV-style design into a responsive personal website.', link: '#', linkText: 'Read article' },
+  { title: 'Why Clean UI Matters in Student Portfolios', text: 'A short article about making personal websites easier to read and understand.', link: '#', linkText: 'Read article' },
+  { title: 'Learning by Building Small Projects', text: 'Why small but complete projects can improve technical skills faster.', link: '#', linkText: 'Open article' },
+  { title: 'How I Present My Academic Work Online', text: 'Tips for showing reports, coursework, and project outcomes in one place.', link: '#', linkText: 'Read article' },
+  { title: 'Simple Design for Better Readability', text: 'How spacing, contrast, and structure affect website usability.', link: '#', linkText: 'Read more' },
+  { title: 'Portfolio Writing in a Professional Tone', text: 'Small writing choices that make a student portfolio look more polished.', link: '#', linkText: 'Read article' }
+];
+
+const notesData = [
+  { title: 'Linux Commands Notes', text: 'Short notes for useful Linux commands and day-to-day terminal workflows.', link: '#', linkText: 'Open note' },
+  { title: 'Docker Quick Notes', text: 'Small reminders and cheat-sheet style notes about containers and images.', link: '#', linkText: 'Open note' },
+  { title: 'AWS Revision Notes', text: 'Concise cloud notes for revision and portfolio documentation.', link: '#', linkText: 'Open note' },
+  { title: 'Python Snippets', text: 'Useful code snippets and mini reminders for Python practice.', link: '#', linkText: 'Open note' },
+  { title: 'Kubernetes Basics', text: 'Simple concept notes for pods, deployments, and services.', link: '#', linkText: 'Open note' },
+  { title: 'Networking Notes', text: 'Compact notes about routing, switching, and addressing.', link: '#', linkText: 'Open note' }
+];
+
+const experienceData = [
+  { title: "Bachelor's Degree in Computer Engineering", meta: '2023 - Present • University Name', text: 'Focused on programming, embedded systems, networking, and software engineering.' },
+  { title: 'Portfolio and Technical Projects', meta: '2024 - Present • Personal Work', text: 'Built websites, worked on programming assignments, and documented technical learning projects.' },
+  { title: 'Articles and Learning Notes', meta: 'Ongoing • Independent Study', text: 'Publishing short articles, study notes, and useful references in a portfolio-friendly format.' },
+  { title: 'Experience Placeholder 4', meta: 'Add your date • Add your place', text: 'Add your next experience or education item here.' },
+  { title: 'Experience Placeholder 5', meta: 'Add your date • Add your place', text: 'Add your next experience or education item here.' },
+  { title: 'Experience Placeholder 6', meta: 'Add your date • Add your place', text: 'Add your next experience or education item here.' }
+];
+
+const skillsData = [
+  {
+    category: 'DevOps',
+    skills: ['Linux', 'Docker', 'AWS', 'Ansible']
+  },
+  {
+    category: 'Programming',
+    skills: ['Python']
+  },
+  {
+    category: 'Orchestration',
+    skills: ['Kubernets']
+  }
+];
