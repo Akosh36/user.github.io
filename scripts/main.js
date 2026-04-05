@@ -118,21 +118,6 @@ setupLoadMore({
   renderItem: createTimelineItem
 });
 
-const tabButtons = document.querySelectorAll('.tab-btn');
-const tabContents = document.querySelectorAll('.tab-content');
-
-tabButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const selectedTab = button.dataset.tab;
-
-    tabButtons.forEach(btn => btn.classList.remove('active'));
-    tabContents.forEach(content => content.classList.remove('active'));
-
-    button.classList.add('active');
-    document.getElementById(selectedTab).classList.add('active');
-  });
-});
-
 function init() {
   renderSkills(skillsData);
 }

@@ -105,55 +105,47 @@
           </div>
         </section>
 
-        <section class="section" id="projects">
+        <section class="section" id="completedProjects">
           <div class="section-title">
-            <h2>Projects</h2>
-            <span class="section-subtitle">Completed and in-progress work</span>
+            <h2>✅ Completed Projects</h2>
+            <span class="section-subtitle">Finished work and accomplished projects</span>
           </div>
-
-          <div class="tab-controls">
-            <button class="tab-btn active" data-tab="portfolioCompleted"><span>✅</span><span>Completed</span></button>
-            <button class="tab-btn" data-tab="portfolioInProgress"><span>🛠️</span><span>In progress</span></button>
+          <div class="articles" id="projectList"></div>
+          <div class="more-wrap">
+            <button class="btn" id="loadMoreProjects">More</button>
           </div>
+        </section>
 
-          <div class="tab-content active" id="portfolioCompleted">
-            <div class="articles" id="projectList"></div>
-            <div class="more-wrap">
-              <button class="btn" id="loadMoreProjects">More</button>
-            </div>
+        <section class="section" id="inProgressProjects">
+          <div class="section-title">
+            <h2>🛠️ In Progress Projects</h2>
+            <span class="section-subtitle">Current work and ongoing development</span>
           </div>
-
-          <div class="tab-content" id="portfolioInProgress">
-            <div class="articles" id="articlePreviewList"></div>
-            <div class="more-wrap">
-              <button class="btn" id="loadMorePreviewArticles">More</button>
-            </div>
+          <div class="articles" id="articlePreviewList"></div>
+          <div class="more-wrap">
+            <button class="btn" id="loadMorePreviewArticles">More</button>
           </div>
         </section>
 
         <section class="section" id="articles">
           <div class="section-title">
-            <h2>Articles & Notes</h2>
-            <span class="section-subtitle">Written content and study materials</span>
+            <h2>📰 Articles</h2>
+            <span class="section-subtitle">Written content and technical posts</span>
           </div>
-
-          <div class="tab-controls">
-            <button class="tab-btn active" data-tab="articlesListSection"><span>📰</span><span>Articles</span></button>
-            <button class="tab-btn" data-tab="notesListSection"><span>📝</span><span>Notes</span></button>
+          <div class="articles" id="mainArticleList"></div>
+          <div class="more-wrap">
+            <button class="btn" id="loadMoreMainArticles">More</button>
           </div>
+        </section>
 
-          <div class="tab-content active" id="articlesListSection">
-            <div class="articles" id="mainArticleList"></div>
-            <div class="more-wrap">
-              <button class="btn" id="loadMoreMainArticles">More</button>
-            </div>
+        <section class="section" id="notes">
+          <div class="section-title">
+            <h2>📝 Notes</h2>
+            <span class="section-subtitle">Study materials and quick references</span>
           </div>
-
-          <div class="tab-content" id="notesListSection">
-            <div class="articles" id="notesList"></div>
-            <div class="more-wrap">
-              <button class="btn" id="loadMoreNotes">More</button>
-            </div>
+          <div class="articles" id="notesList"></div>
+          <div class="more-wrap">
+            <button class="btn" id="loadMoreNotes">More</button>
           </div>
         </section>
 
