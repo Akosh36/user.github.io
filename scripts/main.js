@@ -79,7 +79,7 @@ function setupLoadMore(options) {
 }
 
 setupLoadMore({
-  data: projectsData,
+  data: completedProjectsData,
   containerId: 'projectList',
   buttonId: 'loadMoreProjects',
   step: 5,
@@ -87,7 +87,7 @@ setupLoadMore({
 });
 
 setupLoadMore({
-  data: articlesData,
+  data: inProgressProjectsData,
   containerId: 'articlePreviewList',
   buttonId: 'loadMorePreviewArticles',
   step: 5,

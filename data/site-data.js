@@ -1,14 +1,17 @@
-const projectsData = [
+const completedProjectsData = [
   { title: 'DevOps Learning Portfolio', text: 'A collection of notes, practical labs, and deployment experiments presented in a structured way.', link: '#', linkText: 'View project' },
   { title: 'Networking Lab Archive', text: 'Summaries of routing, switching, and simulation tasks with screenshots, configs, and outcomes.', link: '#', linkText: 'Read more' },
   { title: 'Academic Writing & Research', text: 'Coursework, technical writeups, and presentation-ready materials collected in one portfolio space.', link: '#', linkText: 'Explore' },
   { title: 'Linux Practice Journal', text: 'Commands, troubleshooting notes, and useful Linux workflows documented clearly.', link: '#', linkText: 'Open' },
-  { title: 'Python Mini Projects', text: 'Simple Python practice projects built for learning logic and clean coding.', link: '#', linkText: 'See details' },
+  { title: 'Python Mini Projects', text: 'Simple Python practice projects built for learning logic and clean coding.', link: '#', linkText: 'See details' }
+];
+
+const inProgressProjectsData = [
   { title: 'Embedded Systems Tasks', text: 'Arduino and sensor-based projects with short explanations and code samples.', link: '#', linkText: 'Visit' },
   { title: 'Database Exercises', text: 'Structured SQL tasks and database design practice in an easy-to-review format.', link: '#', linkText: 'Check project' },
-  { title: 'Cybersecurity Notes', text: 'Study notes about security basics, web vulnerabilities, and safe lab practice.', link: '#', linkText: 'Learn more' },
   { title: 'Cloud Practice Reports', text: 'Simple reports and summaries from cloud and deployment related exercises.', link: '#', linkText: 'Open report' },
-  { title: 'Portfolio UI Experiments', text: 'Small frontend layout experiments used to improve personal website design.', link: '#', linkText: 'Preview' }
+  { title: 'Portfolio UI Experiments', text: 'Small frontend layout experiments used to improve personal website design.', link: '#', linkText: 'Preview' },
+  { title: 'Cybersecurity Notes', text: 'Study notes about security basics, web vulnerabilities, and safe lab practice.', link: '#', linkText: 'Learn more' }
 ];
 
 const articlesData = [
@@ -42,14 +45,14 @@ const experienceData = [
 const skillsData = [
   {
     category: 'DevOps',
-    skills: ['Linux', 'Docker', 'AWS', 'Ansible']
+    skills: ['Linux', 'Docker', 'AWS', 'Ansible' , 'Git' , 'Jenkins' , ]
   },
   {
     category: 'Programming',
-    skills: ['Python']
+    skills: ['Python' , 'C/C++' , 'JavaScript' , 'Bash Scripting', 'SQL']
   },
   {
     category: 'Orchestration',
-    skills: ['Kubernets']
+    skills: ['Kubernets' , 'Terraform' , 'Helm' , 'Prometheus' , 'Grafana']
   }
 ];
