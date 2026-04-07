@@ -1,9 +1,6 @@
 const completedProjectsData = [
-  { title: 'DevOps Learning Portfolio', text: 'A collection of notes, practical labs, and deployment experiments presented in a structured way.', link: '#', linkText: 'View project' },
-  { title: 'Networking Lab Archive', text: 'Summaries of routing, switching, and simulation tasks with screenshots, configs, and outcomes.', link: '#', linkText: 'Read more' },
-  { title: 'Academic Writing & Research', text: 'Coursework, technical writeups, and presentation-ready materials collected in one portfolio space.', link: '#', linkText: 'Explore' },
-  { title: 'Linux Practice Journal', text: 'Commands, troubleshooting notes, and useful Linux workflows documented clearly.', link: '#', linkText: 'Open' },
-  { title: 'Python Mini Projects', text: 'Simple Python practice projects built for learning logic and clean coding.', link: '#', linkText: 'See details' }
+  { title: 'Personal Portfolio Website', text: 'A responsive portfolio built with HTML, CSS, and JavaScript to showcase projects and articles.', link: 'https://github.com/Akosh36/BIO', linkText: 'View project' },
+  // title: 'Project Placeholder 6', text: 'Add your next project description here.', link: '#', linkText: 'View project'
 ];
 
 
