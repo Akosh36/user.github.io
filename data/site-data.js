@@ -23,12 +23,8 @@ const articlesData = [
 ];
 
 const notesData = [
-  { title: 'Linux Commands Notes', text: 'Short notes for useful Linux commands and day-to-day terminal workflows.', link: '#', linkText: 'Open note' },
-  { title: 'Docker Quick Notes', text: 'Small reminders and cheat-sheet style notes about containers and images.', link: '#', linkText: 'Open note' },
-  { title: 'AWS Revision Notes', text: 'Concise cloud notes for revision and portfolio documentation.', link: '#', linkText: 'Open note' },
-  { title: 'Python Snippets', text: 'Useful code snippets and mini reminders for Python practice.', link: '#', linkText: 'Open note' },
-  { title: 'Kubernetes Basics', text: 'Simple concept notes for pods, deployments, and services.', link: '#', linkText: 'Open note' },
-  { title: 'Networking Notes', text: 'Compact notes about routing, switching, and addressing.', link: '#', linkText: 'Open note' }
+
+  // { title: 'Note Placeholder 6', text: 'Add your next note description here.', link: '#', linkText: 'Open note' }
 ];
 
 const experienceData = [
